@@ -1,7 +1,9 @@
 package www.xxx.videos.model;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Set;
 
@@ -9,13 +11,12 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Usuario {
+public class Video {
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE.SEQUENCE)
     private Integer id;
     private String nome;
-    private String sexo;
-    private Integer idade;
-    @OneToMany(mappedBy = "criador", fetch = FetchType.EAGER)
-    private Set<Canal> canais;
+    private Double duracao;
+    @OneToMany
+    private Set<Canal> likes;
 }
