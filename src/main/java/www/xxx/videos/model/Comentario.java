@@ -6,20 +6,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Video {
+public class Comentario {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
-    private String nome;
-    private Double duracao;
+    private String mensagem;
     @OneToMany
-    private Set<Canal> likes;
+    private List<Comentario> respostas;
     @OneToMany
-    private List<Video> historico;
+    private List<Usuario> curtidas;
+    private Boolean visivel;
 }

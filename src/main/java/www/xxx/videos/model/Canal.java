@@ -11,7 +11,7 @@ import java.util.Set;
 @Data
 public class Canal {
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
     @ManyToOne
     private Usuario criador;
@@ -21,4 +21,6 @@ public class Canal {
     private Set<Canal> inscricoes;
     @OneToMany
     private Set<Video> curtidos;
+    @OneToMany
+    private Set<Video> postados;
 }

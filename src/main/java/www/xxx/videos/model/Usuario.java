@@ -11,7 +11,7 @@ import java.util.Set;
 @Data
 public class Usuario {
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
     private String nome;
     private String sexo;
