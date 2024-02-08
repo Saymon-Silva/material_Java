@@ -19,6 +19,6 @@ public class Comentario {
     @OneToMany
     private List<Comentario> respostas;
     @OneToMany
-    private List<Usuario> curtidas;
+    private List<Canal> curtidas;
     private Boolean visivel;
 }

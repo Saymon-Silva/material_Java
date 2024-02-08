@@ -6,4 +6,5 @@ import www.xxx.videos.model.Usuario;
 
 @Repository
 public interface UsuairoRepository extends JpaRepository<Usuario, Integer> {
+    Usuario findByNome(String nome);
 }

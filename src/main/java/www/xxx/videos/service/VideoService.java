@@ -27,11 +27,10 @@ public class VideoService {
     public Video update(Video video){
         return videoRepository.save(video);
     }
-    public void deleteObject(Video video){
+    public void delete(Video video){
         videoRepository.delete(video);
     }
     public void deleteById(Integer id){
         videoRepository.deleteById(id);
     }
-
 }

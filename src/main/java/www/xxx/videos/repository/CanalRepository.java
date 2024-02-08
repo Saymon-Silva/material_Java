@@ -7,4 +7,5 @@ import www.xxx.videos.model.Canal;
 @Repository
 public interface CanalRepository extends JpaRepository<Canal, Integer> {
 
+    Canal findByNome(String nome);
 }

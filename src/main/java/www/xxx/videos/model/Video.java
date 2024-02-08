@@ -18,8 +18,10 @@ public class Video {
     private Integer id;
     private String nome;
     private Double duracao;
+    @ManyToOne
+    private Canal criador;
     @OneToMany
-    private Set<Canal> likes;
+    private Set<Canal> curtidas;
     @OneToMany
-    private List<Video> historico;
+    private Set<Comentario> comentarios;
 }
