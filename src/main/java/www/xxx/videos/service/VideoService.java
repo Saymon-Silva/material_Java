@@ -33,4 +33,8 @@ public class VideoService {
     public void deleteById(Integer id){
         videoRepository.deleteById(id);
     }
+
+    public List<Video> findAllByCriador_Nome(String nome){
+        return findAllByCriador_Nome(nome);
+    }
 }

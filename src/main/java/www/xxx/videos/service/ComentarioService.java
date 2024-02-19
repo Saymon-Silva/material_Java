@@ -15,18 +15,18 @@ public class ComentarioService {
     public Comentario create(Comentario comentario){
         return comentarioRepository.save(comentario);
     }
-    public Comentario update(Comentario comentario){
-        return comentarioRepository.save(comentario);
-    }
+//    public Comentario update(Comentario comentario){
+//        return comentarioRepository.save(comentario);
+//    }
     public void delete(Comentario comentario){
         comentarioRepository.delete(comentario);
     }
-    public void deleteById(Integer id){
-        comentarioRepository.deleteById(id);
-    }
-    public Comentario findById(Integer id){
-        return comentarioRepository.findById(id).get();
-    }
+//    public void deleteById(Integer id){
+//        comentarioRepository.deleteById(id);
+//    }
+//    public Comentario findById(Integer id){
+//        return comentarioRepository.findById(id).get();
+//    }
     public List<Comentario> findAll(){
         return comentarioRepository.findAll();
     }

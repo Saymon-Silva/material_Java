@@ -35,7 +35,7 @@ public class CanalController {
         canalService.deleteById(id);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/id/{id}")
     public Canal findById(@PathVariable Integer id) {
         return canalService.findById(id);
     }
