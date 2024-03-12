@@ -14,31 +14,42 @@ public class VideoController {
     private final VideoService videoService;
 
     @PostMapping
-    public void create(@RequestBody Video video){
-        videoService.create(video);
+    public Video create(@RequestBody Video video) {
+        return videoService.create(video);
     }
+
     @PutMapping
-    public void update(@RequestBody Video video){
-        videoService.update(video);
+    public Video update(@RequestBody Video video) {
+        return videoService.update(video);
     }
+
     @GetMapping
-    public List<Video> findAll(){
+    public List<Video> findAll() {
         return videoService.findAll();
     }
+
     @GetMapping("/{id}")
-    public Video findById(@RequestParam Integer id){
+    public Video findById(@PathVariable Integer id) {
         return videoService.findById(id);
     }
+
     @DeleteMapping
-    public void delete(@RequestBody Video video){
+    public void delete(@RequestBody Video video) {
         videoService.delete(video);
     }
+
     @DeleteMapping("/{id}")
-    public void deleteById(@RequestParam Integer id){
+    public void deleteById(@PathVariable Integer id) {
         videoService.deleteById(id);
     }
+
     @GetMapping("/canal")
-    public List<Video> findAllByCriador_Nome(@RequestParam String nome){
+    public List<Video> findAllByCriador_Nome(@RequestParam String nome) {
         return videoService.findAllByCriador_Nome(nome);
+    }
+
+    @GetMapping("/{nome}")
+    public Video findByName(@PathVariable String nome) {
+        return videoService.findByName(nome);
     }
 }

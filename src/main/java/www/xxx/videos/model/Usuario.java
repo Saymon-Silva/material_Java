@@ -1,5 +1,6 @@
 package www.xxx.videos.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -16,6 +17,9 @@ public class Usuario {
     private String nome;
     private String sexo;
     private Integer idade;
-    @OneToMany(mappedBy = "criador", fetch = FetchType.EAGER)
-    private Set<Canal> canais;
+    @OneToOne(mappedBy = "criador", fetch = FetchType.EAGER)
+    private Canal canal;
+    @OneToOne(cascade = CascadeType.ALL)
+//    @JsonIgnore
+    private UsuarioDetailsEntity usuarioDetailsEntity;
 }

@@ -6,4 +6,5 @@ import www.xxx.videos.model.Comentario;
 
 @Repository
 public interface ComentarioRepository extends JpaRepository<Comentario, Integer> {
+
 }

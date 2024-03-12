@@ -24,7 +24,7 @@ public class ComentarioController {
     }
 
     @PostMapping
-    public void create(@RequestBody Comentario comentario) {
-        comentarioService.create(comentario);
+    public Comentario create(@RequestBody Comentario comentario) {
+        return comentarioService.create(comentario);
     }
 }

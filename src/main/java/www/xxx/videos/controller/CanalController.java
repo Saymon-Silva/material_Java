@@ -2,7 +2,6 @@ package www.xxx.videos.controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 import www.xxx.videos.model.Canal;
 import www.xxx.videos.service.CanalService;
@@ -35,14 +34,14 @@ public class CanalController {
         canalService.deleteById(id);
     }
 
-    @GetMapping("/id/{id}")
+    @GetMapping("/{id}")
     public Canal findById(@PathVariable Integer id) {
         return canalService.findById(id);
     }
 
-    @GetMapping("/{nome}")
-    public Canal findByNome(@PathVariable String nome) {
-        return canalService.findByNome(nome);
+    @GetMapping("/nome/{nome}")
+    public List<Canal> findByNome(@PathVariable String nome) {
+        return canalService.findAllByName(nome);
     }
 
     @GetMapping

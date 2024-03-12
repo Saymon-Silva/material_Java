@@ -27,8 +27,8 @@ public class CanalService {
     public Canal findById(Integer id){
         return canalRepository.findById(id).get();
     }
-    public Canal findByNome(String nome){
-        return canalRepository.findByNome(nome);
+    public List<Canal> findAllByName(String nome){
+        return canalRepository.findAllByNome(nome);
     }
     public List<Canal> findAll(){
         return canalRepository.findAll();

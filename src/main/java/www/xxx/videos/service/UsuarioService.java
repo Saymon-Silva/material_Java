@@ -1,38 +1,38 @@
 package www.xxx.videos.service;
 
-import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import www.xxx.videos.model.Usuario;
-import www.xxx.videos.repository.UsuairoRepository;
+import www.xxx.videos.repository.UsuarioRepository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 @AllArgsConstructor
 public class UsuarioService {
-    private final UsuairoRepository usuairoRepository;
+    private final UsuarioRepository usuarioRepository;
 
-    public Usuario create(Usuario usuario){
-        return usuairoRepository.save(usuario);
+    public Usuario create(Usuario usuario) {
+        return usuarioRepository.save(usuario);
     }
-    public Usuario update(Usuario usuario){
-        return usuairoRepository.save(usuario);
+
+    public Usuario update(Usuario usuario) {
+        return usuarioRepository.save(usuario);
     }
-    public void delete(Usuario usuario){
-        usuairoRepository.delete(usuario);
+
+    public void delete(Usuario usuario) {
+        usuarioRepository.delete(usuario);
     }
-    public void deleteById(Integer id){
-        usuairoRepository.deleteById(id);
+
+    public void deleteById(Integer id) {
+        usuarioRepository.deleteById(id);
     }
-    public Usuario findById(Integer id){
-        return usuairoRepository.findById(id).get();
+
+    public Usuario findById(Integer id) {
+        return usuarioRepository.findById(id).get();
     }
-    public Usuario findByNome(String nome){
-        return usuairoRepository.findByNome(nome);
-    }
-    public List<Usuario> findAll(){
-        return usuairoRepository.findAll();
+
+    public List<Usuario> findAll() {
+        return usuarioRepository.findAll();
     }
 }
